@@ -16,6 +16,8 @@
 		F7D85AD42771A63500845166 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D85AD32771A63500845166 /* FeedViewController.swift */; };
 		F7D85AD72771A72800845166 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D85AD62771A72800845166 /* TabBarController.swift */; };
 		F7D85ADB2771AD7900845166 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D85ADA2771AD7900845166 /* FeedTableViewCell.swift */; };
+		F7D85ADD2771BCAB00845166 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D85ADC2771BCAB00845166 /* ProfileViewController.swift */; };
+		F7D85AE12772E87900845166 /* ProfileDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D85AE02772E87900845166 /* ProfileDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		F7D85AD32771A63500845166 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		F7D85AD62771A72800845166 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F7D85ADA2771AD7900845166 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		F7D85ADC2771BCAB00845166 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F7D85AE02772E87900845166 /* ProfileDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +81,28 @@
 			isa = PBXGroup;
 			children = (
 				F7D85AD62771A72800845166 /* TabBarController.swift */,
+				F7D85ADE2772E86500845166 /* Feed */,
+				F7D85ADF2772E86B00845166 /* Profile */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		F7D85ADE2772E86500845166 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
 				F7D85AD32771A63500845166 /* FeedViewController.swift */,
 				F7D85ADA2771AD7900845166 /* FeedTableViewCell.swift */,
 			);
-			path = Scene;
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		F7D85ADF2772E86B00845166 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F7D85ADC2771BCAB00845166 /* ProfileViewController.swift */,
+				F7D85AE02772E87900845166 /* ProfileDataView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +182,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7D85ADD2771BCAB00845166 /* ProfileViewController.swift in Sources */,
 				F7D85ABD2771A4EC00845166 /* AppDelegate.swift in Sources */,
+				F7D85AE12772E87900845166 /* ProfileDataView.swift in Sources */,
 				F7D85AD42771A63500845166 /* FeedViewController.swift in Sources */,
 				F7D85ABF2771A4EC00845166 /* SceneDelegate.swift in Sources */,
 				F7D85AD72771A72800845166 /* TabBarController.swift in Sources */,

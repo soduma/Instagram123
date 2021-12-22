@@ -44,7 +44,7 @@ class FeedTableViewCell: UITableViewCell {
         label.textColor = .label
         label.font = .systemFont(ofSize: 13, weight: .semibold)
         label.numberOfLines = 5
-        label.text = "멍멍이 5명이 좋아합니다."
+        label.text = "멍멍이 외 5명이 좋아합니다."
         return label
     }()
     
