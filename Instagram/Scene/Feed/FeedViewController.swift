@@ -29,7 +29,15 @@ class FeedViewController: UIViewController {
 extension FeedViewController {
     func setUpNavigationBar() {
         navigationItem.title = "Instagram"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(tapPlusButton))
+    }
+    
+    @objc func tapPlusButton() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.modalPresentationStyle = .fullScreen
+        imagePickerController.allowsEditing = true
+        present(imagePickerController, animated: true, completion: nil)
     }
     
     func setUpTableView() {
