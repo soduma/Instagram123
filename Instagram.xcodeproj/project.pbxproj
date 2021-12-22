@@ -18,6 +18,7 @@
 		F7D85ADB2771AD7900845166 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D85ADA2771AD7900845166 /* FeedTableViewCell.swift */; };
 		F7D85ADD2771BCAB00845166 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D85ADC2771BCAB00845166 /* ProfileViewController.swift */; };
 		F7D85AE12772E87900845166 /* ProfileDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D85AE02772E87900845166 /* ProfileDataView.swift */; };
+		F7D85AE32772F06500845166 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D85AE22772F06500845166 /* ProfileCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		F7D85ADA2771AD7900845166 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		F7D85ADC2771BCAB00845166 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F7D85AE02772E87900845166 /* ProfileDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataView.swift; sourceTree = "<group>"; };
+		F7D85AE22772F06500845166 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				F7D85ADC2771BCAB00845166 /* ProfileViewController.swift */,
+				F7D85AE22772F06500845166 /* ProfileCollectionViewCell.swift */,
 				F7D85AE02772E87900845166 /* ProfileDataView.swift */,
 			);
 			path = Profile;
@@ -184,6 +187,7 @@
 			files = (
 				F7D85ADD2771BCAB00845166 /* ProfileViewController.swift in Sources */,
 				F7D85ABD2771A4EC00845166 /* AppDelegate.swift in Sources */,
+				F7D85AE32772F06500845166 /* ProfileCollectionViewCell.swift in Sources */,
 				F7D85AE12772E87900845166 /* ProfileDataView.swift in Sources */,
 				F7D85AD42771A63500845166 /* FeedViewController.swift in Sources */,
 				F7D85ABF2771A4EC00845166 /* SceneDelegate.swift in Sources */,

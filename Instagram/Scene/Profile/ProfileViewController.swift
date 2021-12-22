@@ -9,6 +9,10 @@ import UIKit
 import SnapKit
 
 class ProfileViewController: UIViewController {
+    private let photoDataView = ProfileDataView(title: "게시물", count: 100)
+    private let followerDataView = ProfileDataView(title: "팔로워", count: 123456)
+    private let followingDataView = ProfileDataView(title: "팔로잉", count: 1)
+    
     private lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 40
@@ -56,9 +60,20 @@ class ProfileViewController: UIViewController {
         return button
     }()
     
-    private let photoDataView = ProfileDataView(title: "게시물", count: 100)
-    private let followerDataView = ProfileDataView(title: "팔로워", count: 123456)
-    private let followingDataView = ProfileDataView(title: "팔로잉", count: 1)
+    private lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let width: CGFloat = view.frame.width / 3 - 1
+        layout.scrollDirection = .vertical
+        layout.minimumInteritemSpacing = 0.5
+        layout.minimumLineSpacing = 0.5
+        layout.itemSize = CGSize(width: width, height: width)
+        
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .systemBackground
+        collectionView.register(ProfileCollectionViewCell.self, forCellWithReuseIdentifier: "ProfileCollectionViewCell")
+        collectionView.dataSource = self
+        return collectionView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,10 +83,34 @@ class ProfileViewController: UIViewController {
     }
 }
 
+extension ProfileViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileCollectionViewCell", for: indexPath) as? ProfileCollectionViewCell else { return UICollectionViewCell() }
+        cell.setUp(with: UIImage())
+        return cell
+    }
+}
+
 extension ProfileViewController {
     func setUpNavigationBar() {
         navigationItem.title = "infofield"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(tapEditButton))
+    }
+    
+    @objc func tapEditButton() {
+        let change = UIAlertAction(title: "회원정보 변경", style: .default) { _ in
+            print("변경할거임")
+        }
+        let delete = UIAlertAction(title: "탈퇴하기", style: .destructive, handler: nil)
+        let cancel = UIAlertAction(title: "닫기", style: .cancel, handler: nil)
+        
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        [change, delete, cancel].forEach { alert.addAction($0) }
+        present(alert, animated: true, completion: nil)
     }
     
     func setUpLayout() {
@@ -86,6 +125,7 @@ extension ProfileViewController {
         
         [profileImageView, nameLabel, descriptionLabel, buttonStackView].forEach { view.addSubview($0) }
         view.addSubview(dataStackView)
+        view.addSubview(collectionView)
         
         let inset: CGFloat = 16
         profileImageView.snp.makeConstraints {
@@ -114,6 +154,12 @@ extension ProfileViewController {
             $0.leading.equalTo(profileImageView.snp.trailing).offset(inset)
             $0.trailing.equalToSuperview().inset(inset)
             $0.centerY.equalTo(profileImageView.snp.centerY)
+        }
+        
+        collectionView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview()
+            $0.top.equalTo(buttonStackView.snp.bottom).offset(inset)
+            $0.bottom.equalToSuperview()
         }
     }
 }
