@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0AEE91D27798047004FD36F /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AEE91C27798047004FD36F /* UploadViewController.swift */; };
 		F7D85ABD2771A4EC00845166 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D85ABC2771A4EC00845166 /* AppDelegate.swift */; };
 		F7D85ABF2771A4EC00845166 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D85ABE2771A4EC00845166 /* SceneDelegate.swift */; };
 		F7D85AC42771A4EC00845166 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D85AC22771A4EC00845166 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A0AEE91C27798047004FD36F /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		F7D85AB92771A4EC00845166 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D85ABC2771A4EC00845166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7D85ABE2771A4EC00845166 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				F7D85AD32771A63500845166 /* FeedViewController.swift */,
+				A0AEE91C27798047004FD36F /* UploadViewController.swift */,
 				F7D85ADA2771AD7900845166 /* FeedTableViewCell.swift */,
 			);
 			path = Feed;
@@ -189,6 +192,7 @@
 				F7D85ABD2771A4EC00845166 /* AppDelegate.swift in Sources */,
 				F7D85AE32772F06500845166 /* ProfileCollectionViewCell.swift in Sources */,
 				F7D85AE12772E87900845166 /* ProfileDataView.swift in Sources */,
+				A0AEE91D27798047004FD36F /* UploadViewController.swift in Sources */,
 				F7D85AD42771A63500845166 /* FeedViewController.swift in Sources */,
 				F7D85ABF2771A4EC00845166 /* SceneDelegate.swift in Sources */,
 				F7D85AD72771A72800845166 /* TabBarController.swift in Sources */,
