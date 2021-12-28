@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
     private let photoDataView = ProfileDataView(title: "게시물", count: 100)
     private let followerDataView = ProfileDataView(title: "팔로워", count: 123456)
     private let followingDataView = ProfileDataView(title: "팔로잉", count: 1)
@@ -95,7 +95,7 @@ extension ProfileViewController: UICollectionViewDataSource {
     }
 }
 
-extension ProfileViewController {
+private extension ProfileViewController {
     func setUpNavigationBar() {
         navigationItem.title = "infofield"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(tapEditButton))

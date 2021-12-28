@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class UploadViewController: UIViewController {
+final class UploadViewController: UIViewController {
     private let uploadImage: UIImage
     private let imageView = UIImageView()
     private lazy var textView: UITextView = {
@@ -47,7 +47,7 @@ extension UploadViewController: UITextViewDelegate {
     }
 }
 
-extension UploadViewController {
+private extension UploadViewController {
     func setUpNavigationItem() {
         navigationItem.title = "새 게시물"
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "취소", style: .plain, target: self, action: #selector(tapLeftButton))
