@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class FeedViewController: UIViewController {
+final class FeedViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
         tableView.backgroundColor = .systemBackground
@@ -26,7 +26,7 @@ class FeedViewController: UIViewController {
     }
 }
 
-extension FeedViewController {
+private extension FeedViewController {
     func setUpNavigationBar() {
         navigationItem.title = "Instagram"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(tapPlusButton))
